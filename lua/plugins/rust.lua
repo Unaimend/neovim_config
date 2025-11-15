@@ -48,9 +48,7 @@ return {
             vim.keymap.set("n", "<leader>lR", vim.lsp.buf.rename, { desc = 'rename' })
             vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float, { desc = 'show line diagnostic' })
             vim.keymap.set("n", "<leader>ll", vim.diagnostic.setloclist, { desc = 'Show buffer diagnostics in loclist' })
-            
-            -- Add a useful keymap for refreshing diagnostics
-            vim.keymap.set("n", "<leader>lfc", ":RustLsp refreshWorkspace<CR>", { desc = 'Force Refresh Workspace (Full Check)' })
+            vim.keymap.set("n", "<leader>lc", "<Cmd>RustLsp openCargo<CR>", {desc = "open cargo toml"})
           end
         end,
       })
