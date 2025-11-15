@@ -10,4 +10,8 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.mouse = 'a'
 	
+-- Use system clipboard with y/p
+vim.opt.clipboard = "unnamedplus"
+
+vim.keymap.set('n', '<leader>h', '<cmd>nohlsearch<CR>')
     
