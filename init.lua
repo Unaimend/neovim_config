@@ -24,8 +24,8 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Reload c
 vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Enter Lua command in Normal mode" })
 --vim.keymap.set("v", "<leader>x", ":.lua<CR>", { desc = "Enter Lua command in Visual mode" })
 
-vim.keymap.set("n", "<leader>wh", "<CMD> :split<CR>", { desc = "Horizontal split" })
-vim.keymap.set("n", "<leader>wv", "<CMD> :vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>wH", "<CMD> :split<CR>", { desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>wV", "<CMD> :vsplit<CR>", { desc = "Vertical split" })
 
 vim.keymap.set('n', '<Leader>bl', ':bnext<CR>', { desc = 'Go to Next Buffer' })
 vim.keymap.set('n', '<Leader>bh', ':bprev<CR>', { desc = 'Go to Previous Buffer' })
@@ -35,11 +35,16 @@ vim.keymap.set('n', '<Leader>bc', ':bdelete<CR>', { desc = 'Close Current Buffer
 
 -- Listing buffers is often done with 'b'
 vim.keymap.set('n', '<Leader>bb', ':ls<CR>', { desc = 'List all Buffers' })
+vim.keymap.set('n', '<Leader>wh', '<C-w>h', { desc = 'Move to Left Split' })
+vim.keymap.set('n', '<Leader>wj', '<C-w>j', { desc = 'Move to Down Split' })
+vim.keymap.set('n', '<Leader>wk', '<C-w>k', { desc = 'Move to Up Split' })
+vim.keymap.set('n', '<Leader>wl', '<C-w>l', { desc = 'Move to Right Split' })
 
-vim.keymap.set('n', '<Leader>h', '<C-w>h', { desc = 'Move to Left Split' })
-vim.keymap.set('n', '<Leader>j', '<C-w>j', { desc = 'Move to Down Split' })
-vim.keymap.set('n', '<Leader>k', '<C-w>k', { desc = 'Move to Up Split' })
-vim.keymap.set('n', '<Leader>l', '<C-w>l', { desc = 'Move to Right Split' })
+
+vim.keymap.set('n', '<Leader>qo', '<CMD> :copen<CR>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<Leader>qc', '<CMD> :cclose<CR>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<Leader>qj', '<CMD> :cnext<CR>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<Leader>qk', '<CMD> :cprevious<CR>', { desc = 'Previous quickfix item' })
 
 -- Highlight when yanking (copying) text
 -- Try it with `yap` in normal mode
