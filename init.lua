@@ -46,6 +46,9 @@ vim.keymap.set('n', '<Leader>qc', '<CMD> :cclose<CR>', { desc = 'Next quickfix i
 vim.keymap.set('n', '<Leader>qj', '<CMD> :cnext<CR>', { desc = 'Next quickfix item' })
 vim.keymap.set('n', '<Leader>qk', '<CMD> :cprevious<CR>', { desc = 'Previous quickfix item' })
 
+
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+
 -- Highlight when yanking (copying) text
 -- Try it with `yap` in normal mode
 -- See :help vim.highlight.on_yank()
